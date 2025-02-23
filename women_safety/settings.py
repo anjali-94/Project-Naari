@@ -81,10 +81,15 @@ WSGI_APPLICATION = 'women_safety.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_new',
+        'USER': 'root',
+        'PASSWORD': 'root@2002#',
+        'HOST': 'localhost',  # e.g., 'localhost' or your cloud database URL
+        'PORT': '3306',  # Default MySQL port
     }
 }
+
 
 
 # Password validation
