@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'women_safety.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_new',
-        'USER': 'root',
-        'PASSWORD': 'root@2002#',
-        'HOST': 'localhost',  # e.g., 'localhost' or your cloud database URL
-        'PORT': '3306',  # Default MySQL port
+        'NAME':  os.getenv('django_new'),
+        'USER': os.getenv('root'),
+        'PASSWORD': os.getenv('root@2002#'),
+        'HOST': os.getenv('localhost'),  # e.g., 'localhost' or your cloud database URL
+        'PORT': os.getenv('3306'),  # Default MySQL port
     }
 }
 
@@ -134,3 +134,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 X_FRAME_OPTIONS = 'ALLOWALL'
+
+import pymysql
+pymysql.install_as_MySQLdb()
+

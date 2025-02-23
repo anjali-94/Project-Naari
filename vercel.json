@@ -17,7 +17,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "women_safety/wsgi.py"
+      "dest": "manage.py"
     }
   ]
 }
